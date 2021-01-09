@@ -24,13 +24,27 @@ class PokedexViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    private func setUpView() {
+        pokemonSearch.placeholder = "Pokemon"
+    }
+    
     private func setUpCollectionViewCell() {
         let cell = UINib(nibName: "PokedexCollectionViewCell", bundle: nil)
         self.pokemonCollectionView.register(cell, forCellWithReuseIdentifier: "pokemonCell")
     }
     
     private func setUpData() {
-        pokemonsData = [Pokemon(name: "Test1", image: "Test1Image"), Pokemon(name: "Test2", image: "Test2Image")]
+        for i in 0...151 {
+            var pokemon = Pokemon()
+            if i < 10 {
+                pokemon = Pokemon(name: "\(i)", image: "00\(i)")
+            } else if i < 100 {
+                pokemon = Pokemon(name: "\(i)", image: "0\(i)")
+            } else {
+                pokemon = Pokemon(name: "\(i)", image: "\(i)")
+            }
+            pokemonsData.append(pokemon)
+        }
     }
     
 }

@@ -19,7 +19,13 @@ class PokedexCollectionViewCell: UICollectionViewCell {
     
     public func setUpCell(poken: Pokemon) {
         pokemonName.text = "Kevinho"
-        pokemonImage.image = UIImage(named: "001")
+        for i in 0...151 {
+            if i <= 100 {
+                pokemonImage.image = UIImage(named: "00\(i)")
+            } else {
+                pokemonImage.image = UIImage(named: "\(i)")
+            }
+        }
     }
     
 }
