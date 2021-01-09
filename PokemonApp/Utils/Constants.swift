@@ -8,5 +8,11 @@
 import Foundation
 
 struct Constants {
-    static let pokedexURL = ""
+    
+    static let pokedexBaseURL = "https://pokeapi.co/api/v2/"
+    struct EndPoints {
+        static let pokemonData = pokedexBaseURL + "ability/solar-power"
+        static let pokemonDescription = pokedexBaseURL + "pokemon-species/"
+        static let pokemonSkills = pokedexBaseURL + "pokemon/"
+    }
 }

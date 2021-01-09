@@ -16,5 +16,12 @@ class MainCoordinator: Coordinator {
         pokedexView.coordinator = self
         navigationController.pushViewController(pokedexView, animated: true)
     }
+    
+    func showPokemonDetail(pokemon: Pokemon) {
+        let pokedexDetail = PokedexDetailViewController(nibName: "PokedexDetailViewController", bundle: nil)
+        pokedexDetail.coordinator = self
+        pokedexDetail.pokemon = pokemon.name
+        navigationController.pushViewController(pokedexDetail, animated: true)
+    }
 
 }

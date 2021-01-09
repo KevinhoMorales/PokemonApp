@@ -18,8 +18,8 @@ class PokedexCollectionViewCell: UICollectionViewCell {
     }
     
     public func setUpCell(poken: Pokemon) {
-        pokemonName.text = poken.name
-        pokemonImage.image = poken.image
+        pokemonName.text = "Kevinho"
+        pokemonImage.image = UIImage(named: "001")
     }
-
+    
 }

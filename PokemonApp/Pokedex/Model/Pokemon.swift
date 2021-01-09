@@ -1,13 +1,11 @@
 //
-//  PokedexModel.swift
+//  PokemonModel.swift
 //  PokemonApp
 //
 //  Created by Kevinho Morales on 8/1/21.
 //
 
-import UIKit
-
-struct Pokemon {
+struct Pokemon: Codable {
     var name = String()
-    var image = UIImage()
+    var image = String()
 }
