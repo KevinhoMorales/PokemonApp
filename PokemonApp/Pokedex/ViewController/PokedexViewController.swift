@@ -21,6 +21,7 @@ class PokedexViewController: UIViewController {
         title = "Pokedex"
         setUpCollectionViewCell()
         setUpData()
+        setUpView()
         // Do any additional setup after loading the view.
     }
     
